@@ -1,0 +1,80 @@
+main {
+    padding: 20px;
+
+    h1 {
+        color: rgb(73, 73, 73);
+        text-align: center;
+    }
+
+    section {
+        box-shadow: 0 0 3px rgb(185, 185, 185);
+
+        div,
+        a {
+            display: grid;
+            grid-template-columns: 60px repeat(4, 1fr);
+            justify-content: space-between;
+            padding: 3px;
+            padding-left: 10px;
+        }
+
+        div {
+            background-color: rgb(218, 0, 65);
+            border: 1px solid rgb(216, 216, 216);
+            color: white;
+            grid-template-areas: ". name gender birthday species";
+
+            span {
+                &:nth-of-type(1) {
+                    grid-area: name;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: gender;
+                }
+
+                &:nth-of-type(3) {
+                    grid-area: birthday;
+                }
+
+                &:nth-of-type(4) {
+                    grid-area: species;
+                }
+            }
+        }
+
+        a {
+            align-items: center;
+            grid-template-rows: repeat(auto-fit, 40px);
+            text-decoration: none;
+            padding: 10px;
+
+            &:hover {
+                background-color: rgb(230, 230, 230);
+            }
+
+            &:nth-of-type(even) {
+                background-color: rgb(241, 241, 241);
+
+                &:hover {
+                    background-color: rgb(214, 214, 214);
+                }
+            }
+
+            span {
+                &:nth-of-type(1) {
+                    border: 1px solid rgb(199, 199, 199);
+                    border-radius: 50%;
+                    height: 40px;
+                    width: 40px;
+
+                    &.image {
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

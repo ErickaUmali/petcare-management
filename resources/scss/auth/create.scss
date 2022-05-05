@@ -1,0 +1,206 @@
+main {
+    align-items: center;
+    background-color: #8d31d8;
+    display: grid;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    padding: 20px;
+
+    section {
+        display: none;
+    }
+
+    form {
+        background-color: white;
+        border-radius: 3px;
+        box-shadow: 0 0 5px darken($color: #8d31d8, $amount: 30);
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+
+        &.mobile-md {
+            display: none;
+        }
+
+        &.desktop {
+            display: none;
+        }
+
+        h1 {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .button-container {
+            display: grid;
+            grid-template-columns: 170px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        div {
+            span {
+                color: red;
+                font-size: .8em;
+            }
+        }
+
+        p {
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width:400px) {
+    main {
+        grid-template-columns: 90%;
+    }
+}
+
+@media screen and (min-width:450px) {
+    main {
+        grid-template-columns: 85%;
+    }
+}
+
+@media screen and (min-width:500px) {
+    main {
+        grid-template-columns: 80%;
+
+        form {
+            &.mobile-sm {
+                display: none;
+            }
+
+            &.mobile-md {
+                display: grid;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:550px) {
+    main {
+        grid-template-columns: 75%;
+    }
+}
+
+@media screen and (min-width:600px) {
+    main {
+        grid-template-columns: 70%;
+    }
+}
+
+@media screen and (min-width:650px) {
+    main {
+        grid-template-columns: 65%;
+    }
+}
+
+@media screen and (min-width:700px) {
+    main {
+        grid-template-columns: 60%;
+    }
+}
+
+@media screen and (min-width:750px) {
+    main {
+        grid-template-columns: 55%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    body {
+        align-items: center;
+        background-color: #eee9f1;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+    }
+
+    main {
+        align-items: flex-start;
+        background-color: white;
+        grid-template-columns: 350px 400px;
+        grid-template-rows: 100%;
+        justify-content: center;
+        min-height: auto;
+        height: auto;
+        margin: 20px 0;
+        padding: 0;
+
+        form,
+        section {
+            border-radius: 0;
+            box-shadow: 0 0 5px gray;
+            height: 100%;
+        }
+
+        section {
+            align-items: center;
+            background-color: #400174;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            &>div {
+
+                &.button-container {
+                    display: grid;
+                    grid-template-columns: 170px;
+                    justify-content: center;
+
+                    a {
+                        background-color: white;
+                        border: 2px solid white;
+                        box-shadow: 0 0 5px #08000f;
+                        color: #400174;
+
+                        &:hover {
+                            background-color: #400174;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+
+        form {
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+
+            &.mobile {
+                display: none;
+            }
+
+            &.desktop {
+                display: grid;
+
+                p {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:850px) {
+    main {
+        grid-template-columns: 370px 420px;
+    }
+}
+
+@media screen and (min-width:950px) {
+    main {
+        grid-template-columns: 390px 440px;
+    }
+}

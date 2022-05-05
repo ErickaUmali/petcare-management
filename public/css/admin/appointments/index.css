@@ -1,0 +1,55 @@
+main {
+  font-family: "Poppins-Regular", sans-serif;
+  padding: 20px;
+}
+main header {
+  display: flex;
+  justify-content: space-between;
+}
+main header p {
+  font-size: 1.5em;
+}
+main section {
+  box-shadow: 0 0 3px gray;
+  display: grid;
+  margin: 0 auto;
+  width: 370px;
+}
+main section div,
+main section form {
+  display: grid;
+  grid-template-columns: 40px 210px 40px;
+}
+main section .header {
+  background-color: rgb(0, 4, 218);
+  color: white;
+  grid-template-areas: ". name action";
+  padding: 5px 20px;
+}
+main section .header span:nth-of-type(1) {
+  grid-area: name;
+}
+main section .header span:nth-of-type(2) {
+  grid-area: action;
+}
+main section form {
+  align-items: center;
+  grid-template-areas: "index name action";
+  padding: 10px 20px;
+}
+main section form:nth-of-type(odd) {
+  background-color: rgb(231, 233, 255);
+}
+main section form span:nth-of-type(1) {
+  grid-area: index;
+}
+main section form span:nth-of-type(2) {
+  grid-area: name;
+}
+main section form span:nth-of-type(3) {
+  grid-area: action;
+}
+main label {
+  font-size: 0.8em;
+  font-weight: bold;
+}

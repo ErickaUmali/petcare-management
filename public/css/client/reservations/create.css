@@ -1,0 +1,40 @@
+main {
+  align-items: center;
+  background-color: rgb(235, 219, 223);
+  display: flex;
+  justify-content: center;
+}
+main form {
+  background-color: white;
+  box-shadow: 0 0 3px gray;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: auto;
+  padding: 20px;
+  width: 60%;
+}
+main form label {
+  font-size: 0.8em;
+}
+main form div.pet {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 55px;
+}
+main form div.pet .image {
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+}
+main form div.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+main form div .form-control {
+  background-color: white !important;
+}
+main form div span {
+  color: red;
+  font-size: 0.8em;
+}

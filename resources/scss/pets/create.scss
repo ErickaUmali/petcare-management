@@ -1,0 +1,69 @@
+main {
+    background-color: rgb(235, 219, 223);
+    padding: 20px;
+
+    form {
+        background-color: white;
+        box-shadow: 0 0 3px gray;
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "h1 h1"
+            "name birthday"
+            "species breed"
+            "gender marking"
+            "button button";
+        justify-content: center;
+        margin: 50px auto;
+        padding: 20px;
+        width: 80%;
+
+        h1 {
+            margin: 0;
+            grid-area: h1;
+            text-align: center;
+        }
+
+        div {
+            &:nth-of-type(1) {
+                grid-area: name;
+            }
+
+            &:nth-of-type(2) {
+                grid-area: birthday;
+
+                input.form-control {
+                    background-color: white !important;
+                }
+            }
+
+            &:nth-of-type(3) {
+                grid-area: gender;
+            }
+
+            &:nth-of-type(4) {
+                grid-area: species;
+            }
+
+            &:nth-of-type(5) {
+                grid-area: breed;
+            }
+
+            &:nth-of-type(6) {
+                grid-area: marking;
+            }
+        }
+
+        .button-container {
+            grid-area: button;
+            display: flex;
+            justify-content: flex-end;
+
+            button {
+                text-align: center;
+                width: 120px;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+main {
+  padding: 20px;
+}
+main header {
+  font-size: 1.5em;
+}
+main > section {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 200px auto;
+  grid-template-areas: "image details" ". details";
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 700px;
+}
+main > section .image {
+  align-items: center;
+  display: flex;
+  grid-area: image;
+  justify-content: center;
+}
+main > section .image span {
+  align-items: center;
+  border: 1px solid gray;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+main > section .image .img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+main > section .details section:nth-of-type(1) {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+main > section .details section:nth-of-type(1) div {
+  display: grid;
+  grid-template-rows: 12px auto;
+  font-weight: bold;
+  margin: 0;
+}
+main > section .details section:nth-of-type(1) div:nth-of-type(1) {
+  grid-template-rows: 25px auto;
+}
+main > section .details section:nth-of-type(1) div:nth-of-type(1) p:nth-of-type(1) {
+  color: rgb(71, 71, 71);
+  font-size: 1.2em;
+}
+main > section .details section:nth-of-type(1) div span,
+main > section .details section:nth-of-type(1) div p {
+  color: rgb(71, 71, 71);
+}
+main > section .details section:nth-of-type(1) div span {
+  font-size: 0.7em;
+  height: 10px;
+}
+main > section .details section:nth-of-type(1) div p {
+  font-size: 1em;
+  margin: 0;
+}
+main > section .details section:nth-of-type(2) {
+  border-top: 1px solid rgb(199, 197, 197);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
+main > section .details section:nth-of-type(2) div {
+  display: grid;
+  grid-template-columns: 140px auto;
+}
+main > section .details section:nth-of-type(2) div span:nth-of-type(1) {
+  color: rgb(71, 71, 71);
+  font-weight: bold;
+}
+main > section .details form {
+  border-top: 1px solid rgb(199, 197, 197);
+  padding-top: 10px;
+}
+main > section .details form label {
+  color: rgb(71, 71, 71);
+  font-weight: bold;
+  font-size: 0.8em;
+}
+main > section .details form .button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+main > section .details form span {
+  color: red;
+  font-size: 0.8em;
+}

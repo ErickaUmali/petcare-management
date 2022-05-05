@@ -1,0 +1,36 @@
+main {
+    font-family: 'Poppins-Regular', sans-serif;
+    padding: 20px;
+
+    header {
+        font-size: 1.5em;
+    }
+
+    form {
+        box-shadow: 0 0 3px gray;
+        margin: 0 auto;
+        margin-top: 20px;
+        padding: 10px;
+        width: 500px;
+
+        label,
+        span {
+            font-size: .8em;
+        }
+
+        label {
+            color: rgb(85, 85, 85);
+            font-weight: bold;
+        }
+
+        span {
+            color: red;
+        }
+
+        .modal-body {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+}

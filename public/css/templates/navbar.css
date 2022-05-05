@@ -1,0 +1,63 @@
+nav {
+  box-shadow: 0 0 5px #cccccc;
+  font-family: "Poppins-Regular";
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+nav.navbar .logo {
+  display: none;
+}
+nav.navbar > div .navbar-brand {
+  display: none;
+}
+nav.navbar > div div {
+  width: 100%;
+}
+nav.navbar > div .navbar-nav {
+  font-weight: bold;
+}
+nav.navbar > div .navbar-nav .nav-item {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+nav.navbar > div .navbar-nav .nav-item > * {
+  padding: 10px;
+}
+nav.navbar > div .navbar-nav .nav-item a {
+  color: rgb(233, 0, 136);
+  text-decoration: none;
+}
+nav.navbar > div .navbar-nav .nav-item a.active {
+  color: rgb(182, 0, 106);
+}
+nav.navbar > div .navbar-nav .nav-item button {
+  background-color: inherit;
+  border: none;
+  color: rgb(233, 0, 136);
+  font-weight: bold;
+}
+nav.navbar > div .navbar-nav .nav-item button.active {
+  color: rgb(182, 0, 106);
+}
+
+@media screen and (min-width: 768px) {
+  nav.navbar .navbar-brand {
+    display: flex !important;
+  }
+  nav.navbar .navbar-brand span {
+    align-items: center;
+    display: flex;
+  }
+  nav.navbar .logo {
+    display: block;
+    width: 80px;
+  }
+  nav.navbar > div.container-fluid > div {
+    width: auto;
+  }
+  nav.navbar > div .navbar-brand {
+    display: block;
+  }
+}

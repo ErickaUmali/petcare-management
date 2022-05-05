@@ -1,0 +1,186 @@
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url(/fonts/Poppins-Medium.ttf?673ed42382ab264e0bf5b33f3579568c);
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(/fonts/Poppins-Regular.ttf?35d26b781dc5fda684cce6ea04a41a75);
+}
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(/fonts/Poppins-Light.ttf?7641a0f76ca9ef6c252ce242f76e8b1d);
+}
+main {
+  font-family: "Poppins-Regular", sans-serif;
+}
+
+.button {
+  background-color: #400174;
+  border: 2px solid rgb(64, 1, 116);
+  border-radius: 40px;
+  box-shadow: 0 0 3px gray;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 250ms, color 250ms;
+}
+.button:hover {
+  background-color: white;
+  color: rgb(64, 1, 116);
+  font-weight: bold;
+}
+
+.notification {
+  display: none;
+  margin: 0 auto;
+  margin-top: 10px;
+  position: fixed;
+  top: 0;
+}
+.notification.notif-mobile.show {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto 24px;
+}
+.notification.notif-mobile.alert-danger {
+  box-shadow: 0 0 5px #990000;
+}
+.notification.notif-mobile.alert-success {
+  box-shadow: 0 0 5px #001a00;
+}
+.notification.notif-mobile.notification-animation {
+  -webkit-animation: notif 1.5s linear forwards;
+          animation: notif 1.5s linear forwards;
+}
+@-webkit-keyframes notif {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+@keyframes notif {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .notification.notif-desktop.show {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto 24px;
+  }
+  .notification.notif-desktop.alert-danger {
+    box-shadow: 0 0 5px #990000;
+  }
+  .notification.notif-desktop.alert-success {
+    box-shadow: 0 0 5px #001a00;
+  }
+  .notification.notif-desktop.notification-animation {
+    -webkit-animation: notif 1.5s linear forwards;
+            animation: notif 1.5s linear forwards;
+  }
+  @-webkit-keyframes notif {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+  @keyframes notif {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      display: none;
+      opacity: 0;
+    }
+  }
+}
+.dashboard-main-container {
+  font-family: "Poppins-Regular", sans-serif;
+  display: grid;
+  grid-template-columns: 220px calc(100% - 220px);
+  grid-template-rows: 100%;
+  grid-template-areas: "dashboard content";
+  min-height: 582px;
+  margin-top: 75px;
+}
+.dashboard-main-container aside {
+  box-shadow: 0 0 3px gray;
+  grid-area: dashboard;
+  margin-top: 75px;
+  top: 0;
+  position: fixed;
+  height: 582px;
+  width: 220px;
+}
+.dashboard-main-container aside > a {
+  background-color: rgb(218, 0, 65);
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  margin: 0;
+  padding: 20px;
+  text-decoration: none;
+}
+.dashboard-main-container aside > a.admin {
+  background-color: rgb(0, 4, 218);
+}
+.dashboard-main-container aside > a.staff {
+  background-color: rgb(192, 93, 0);
+}
+.dashboard-main-container aside > .accordion .accordion-collapse {
+  margin-left: 20px;
+}
+.dashboard-main-container aside > .accordion .accordion-collapse a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+}
+.dashboard-main-container aside > .links a {
+  border-bottom: 1px solid rgb(226, 226, 226);
+  color: #212529;
+  display: block;
+  padding: 16px 10px;
+  text-decoration: none;
+}
+.dashboard-main-container aside > .links a:nth-of-type(1) {
+  border-top: 1px solid rgb(226, 226, 226);
+}
+.dashboard-main-container aside > .links a:hover {
+  background-color: #f6faff;
+}
+.dashboard-main-container aside > .links a.active {
+  color: #0c63e4;
+  background-color: #e7f1ff;
+}
+.dashboard-main-container aside > .links a.active:hover {
+  background-color: #dbeaff;
+}
+.dashboard-main-container main {
+  grid-area: content;
+}

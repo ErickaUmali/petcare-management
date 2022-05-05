@@ -1,0 +1,123 @@
+main {
+  font-size: 0.85em;
+  padding: 20px;
+}
+main header {
+  align-items: center;
+  box-shadow: 0 0 3px gray;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+main header div {
+  display: flex;
+  gap: 10px;
+}
+main header div p {
+  align-items: center;
+  display: flex;
+  font-size: 1.2em;
+  margin: 0;
+}
+main header div form .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main header div form .modal-body > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+main header div form .modal-body > div label {
+  color: rgb(78, 78, 78);
+  font-size: 0.8em;
+  font-weight: bold;
+}
+main header div form .modal-body > div > div {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto 31px;
+  grid-template-rows: 31px;
+}
+main header div form .modal-body > div > div .form-check-input {
+  margin: 0;
+}
+main section {
+  box-shadow: 0 0 3px gray;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+main section div {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+}
+main section div.header {
+  background-color: rgb(0, 4, 218);
+  color: white;
+  grid-template-areas: ". owner pet species date time";
+  padding: 5px;
+}
+main section div.header span:nth-of-type(1) {
+  grid-area: owner;
+}
+main section div.header span:nth-of-type(2) {
+  grid-area: pet;
+}
+main section div.header span:nth-of-type(3) {
+  grid-area: species;
+}
+main section div.header span:nth-of-type(4) {
+  grid-area: date;
+}
+main section div.header span:nth-of-type(5) {
+  grid-area: time;
+}
+main section div.empty {
+  grid-template-columns: 100%;
+  justify-content: center;
+  padding: 10px;
+  text-align: center;
+}
+main section a {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  text-decoration: none;
+}
+main section .details {
+  padding: 10px;
+}
+main section .details:hover {
+  background-color: rgb(234, 238, 255);
+}
+main section .details:nth-of-type(odd) {
+  background-color: rgb(234, 238, 255);
+}
+main section .details:nth-of-type(odd):hover {
+  background-color: rgb(214, 222, 255);
+}
+main section .details > span {
+  align-items: center;
+  display: flex;
+}
+main section .details .image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+main section .details .image span {
+  align-items: center;
+  border: 1px solid gray;
+  display: flex;
+  font-size: 1.5em;
+  font-weight: bold;
+  height: 40px;
+  justify-content: center;
+  width: 40px;
+}
+main section .details .image .img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
